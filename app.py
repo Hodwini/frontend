@@ -12,5 +12,6 @@ def page_index():
 def page_wiki():
     return render_template("wiki.html")
 
+
 if __name__ == "__main__":
     app.run(debug=True)
