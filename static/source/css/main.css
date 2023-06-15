@@ -1,0 +1,41 @@
+/* main.css */
+
+/* Стили для шапки */
+header {
+    padding: 10px;
+    background-color: #d15909;
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+  }
+
+  .navbar-brand img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 5px;
+}
+
+  .navbar-nav .nav-link {
+    margin-left: 10px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .navbar-nav .nav-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Стили для основного содержимого */
+  main {
+    padding: 20px;
+  }
+
+  /* Стили для подвала */
+  footer {
+    padding: 10px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+
+  /* Дополнительные стили или изменения, если необходимо */
