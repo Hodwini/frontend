@@ -8,10 +8,11 @@ Frontend часть сайта [Hodwini](https://hodwini.net/), написанн
 ## Установка
 
 Клонируйте проект и создайте виртуальное окружение и активируйте его:
-> <br> ```python -m venv venv```
 
-> <br> ```venv\Activate\Scripts```
+> <br> `python -m venv venv`
+
+> <br> `venv\Activate\Scripts`
 
 Установите зависимости, введя в терминале следующее:
 
-> <br> ```pip install -r requirements.txt```
+> <br> `pip install -r requirements.txt`
