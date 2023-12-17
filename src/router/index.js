@@ -3,7 +3,7 @@ import MainPage from "../views/MainPage.vue"
 import NotFound from "../components/NotFound.vue"
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  base: "/",
+  base: "frontend/",
   routes: [
     {
       path: "/",
