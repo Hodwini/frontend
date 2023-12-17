@@ -67,7 +67,7 @@ export default {
             <a href="https://vk.com/hodwini">
               <img
                 class="social_icon"
-                src="../components/icons/Vkontakte.png"
+                src="../components/icons/VKontakte.png"
                 alt=""
             /></a>
           </div>
