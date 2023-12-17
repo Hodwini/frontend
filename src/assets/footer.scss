@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+}
+@font-face {
+    font-family: Minecraftia;
+    src: url(../assets/Minecraftia-Regular.ttf);
+}
+@mixin font($fontSize) {
+    font-family: Minecraftia;
+    font-size: $fontSize;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+footer {
+    & p {
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        @include font(16px);
+    }
+}

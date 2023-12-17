@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+}
+body {
+    background-color: rgba(17, 19, 23, 1);
+}
+body::-webkit-scrollbar {
+    width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #666666;
+    border-radius: 20px;
+    border: none;
+}
+
+@font-face {
+    font-family: Minecraftia;
+    src: url(../assets/Minecraftia-Regular.ttf);
+}
+@mixin font($fontSize) {
+    font-family: Minecraftia;
+    font-size: $fontSize;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 150px;
+    margin: 4% 9% 5% 9%;
+    transition: margin 0.3s;
+    .main_image {
+    }
+    .main_description {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+
+        & h1 {
+            @include font(3.3vw);
+            background: linear-gradient(269deg, #fc3 0%, #f90 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            // white-space: nowrap;
+            // overflow: hidden;
+            // width: 100%;
+            // animation: typing 4s steps(60, end);
+        }
+        & p {
+            @include font(1.6vw);
+            line-height: 46px;
+            white-space: pre-line;
+            // white-space: nowrap;
+            // overflow: hidden;
+            // width: 100%;
+            // animation: typing 6s steps(60, end);
+            // &:nth-child(1) {
+            //     animation: typing 6s steps(1000, end);
+            // }
+            // &:nth-child(2) {
+            //     animation: typing 2s steps(1000, end);
+            // }
+            // &:nth-child(3) {
+            //     animation: typing 6s steps(1000, end);
+            // }
+            // &:nth-child(4) {
+            //     animation: typing 7s steps(1000, end);
+            // }
+            // &:nth-child(5) {
+            //     animation: typing 8s steps(1000, end);
+            // }
+            // &:nth-child(6) {
+            //     animation: typing 9s steps(1000, end);
+            // }
+            // &:nth-child(7) {
+            //     animation: typing 10s steps(1000, end);
+            // }
+        }
+        // @keyframes typing {
+        //     from {
+        //         width: 0;
+        //     }
+        // }
+        // @keyframes typing-2 {
+        //     0% {
+        //         width: 0;
+        //     }
+        //     50% {
+        //         width: 0;
+        //     }
+        //     100% {
+        //         width: 100;
+        //     }
+        // }
+        .social_info {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+            gap: 0 25px;
+            .social_icons {
+                display: flex;
+                gap: 0 20px;
+                & a {
+                    transition:
+                        transform 0.2s ease,
+                        opacity 0.3s ease;
+                    transform-origin: 50% 80%;
+                    @include font(24px);
+                    &:hover {
+                        transform: scale3d(1.02, 1.02, 1);
+                        border-radius: 8px;
+                        cursor: pointer;
+                        cursor: pointer;
+                    }
+                }
+                .social_icon {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            .play_btn {
+                cursor: pointer;
+                position: relative;
+
+                transition:
+                    transform 0.2s ease,
+                    opacity 0.3s ease;
+                transform-origin: 50% 80%;
+                @include font(24px);
+                &:hover {
+                    transform: scale3d(1.02, 1.02, 1);
+                    border-radius: 8px;
+                    cursor: pointer;
+                    cursor: pointer;
+                }
+
+                & span {
+                    position: absolute;
+                    left: 47px;
+                    top: 5px;
+                    @include font(24px);
+                    z-index: 1;
+                    height: 20px;
+                }
+                .copy-success-message {
+                    text-align: center;
+                    position: absolute;
+                    padding: 10px;
+                    margin-top: 10px;
+                    color: #fff;
+                    @include font(15px);
+                    border-radius: 8px;
+                    background-color: rgba(17, 19, 23, 1);
+                    border: 1px solid #2e2e2e;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1800px) {
+    main {
+        gap: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    main {
+        margin: 8% 5%;
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    main {
+        flex-direction: column;
+        text-align: center;
+        .main_image {
+            & img {
+                width: 70%;
+            }
+        }
+        .main_description {
+            margin-top: 50px;
+            & p {
+                line-height: 26px;
+                font-size: 20px;
+                width: 60%;
+                white-space: pre-line;
+                margin: 0 auto;
+                padding: 0 0 20px 0;
+            }
+            .social_info {
+                justify-content: center;
+            }
+        }
+    }
+}
+@media screen and (max-width: 780px) {
+    main {
+        .main_image {
+            & img {
+                width: 80%;
+            }
+        }
+        .main_description {
+            & h1 {
+                font-size: 5vw;
+            }
+            & p {
+                font-size: 2.5vw;
+                line-height: 26px;
+            }
+            .social_info {
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        .main_image {
+            & img {
+                width: 80%;
+            }
+        }
+        .main_description {
+            & h1 {
+                font-size: 8vw;
+            }
+            & p {
+                width: 100%;
+                padding: 10px 20px;
+                font-size: 3.8vw;
+                line-height: 26px;
+            }
+            .social_info {
+                flex-direction: column;
+                margin-top: 20px;
+                .play_btn {
+                    & img {
+                        width: 250px;
+                    }
+                    & span {
+                        left: 77px;
+                        top: 15px;
+                    }
+                }
+                .social_icons {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

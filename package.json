@@ -1,0 +1,26 @@
+{
+  "name": " hodwinivue",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@duskmoon/vue3-typed-js": "^0.0.4",
+    "pinia": "^2.1.4",
+    "typed.js": "^2.1.0",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "vue-sweetalert2": "^5.0.5",
+    "vue-typed-js": "^0.1.2",
+    "vue2-transitions": "^0.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/compiler-sfc": "^3.3.7",
+    "sass": "^1.69.5",
+    "vite": "^4.4.6"
+  }
+}
