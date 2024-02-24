@@ -77,11 +77,16 @@ nav {
                                 opacity 0.3s ease;
                             transform-origin: 50% 80%;
                             @include font(24px);
-                            &:hover {
+                            &:not(.active):hover {
                                 transform: scale3d(1.1, 1.1, 1);
                                 border-radius: 8px;
                                 cursor: pointer;
-                                cursor: pointer;
+                            }
+
+                            &.active {
+                                text-decoration: underline;
+                                cursor: default;
+                                color: #f90;
                             }
                         }
                     }
@@ -94,10 +99,9 @@ nav {
                             opacity 0.3s ease;
                         transform-origin: 50% 80%;
                         @include font(24px);
-                        &:hover {
+                        &:not(.active):hover {
                             transform: scale3d(1.1, 1.1, 1);
                             border-radius: 8px;
-                            cursor: pointer;
                             cursor: pointer;
                         }
                     }

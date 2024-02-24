@@ -5,6 +5,12 @@ export default {
       isBar: false,
       isDesktop: true,
       menuOpened: false,
+      // Вообще не очень гуд так делать, ибо роуты должны
+      // передаваться в пропсах, но пох ибо переписывать будем
+      navLinks: [
+        { path: '/', text: 'Главная', name: 'home' },
+        { path: '/rules', text: 'Правила', name: 'rules' },
+      ]
     };
   },
   created() {
@@ -14,6 +20,11 @@ export default {
     mediaQuery.addListener((e) => {
       this.isDesktop = e.matches;
     });
+  },
+  computed: {
+    currentRouteName() {
+        return this.$route.name;
+    }
   },
   methods: {
     changeBar() {
@@ -37,11 +48,12 @@ export default {
         <Transition>
           <div class="nav mobile-menu" v-if="isBar || isDesktop">
             <ul class="bar">
-              <RouterLink to="/">
-                <li class="list_item">Главная</li>
-              </RouterLink>
-              <RouterLink to="/rules">
-                <li class="list_item">Правила</li>
+              <RouterLink v-for="link in navLinks" :key="link.name" v-bind:to="link.path">
+                <li
+                  v-bind:class="'list_item' + (link.name === currentRouteName ? ' active' : '')"
+                >
+                  {{ link.text }}
+                </li>
               </RouterLink>
               <a href="https://discord.gg/4t27QFPrH6">
                 <li class="list_item">О проекте</li>
