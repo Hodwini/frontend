@@ -1,7 +1,11 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <main>
+        <div class="main_description">
+            <p>
+                Страница "О проекте"
+            </p>
+        </div>
+    </main>
 </template>
 
 <style>

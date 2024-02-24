@@ -10,6 +10,7 @@ export default {
       navLinks: [
         { path: '/', text: 'Главная', name: 'home' },
         { path: '/rules', text: 'Правила', name: 'rules' },
+        { path: '/about', text: 'О проекте', name: 'about' },
       ]
     };
   },
@@ -55,9 +56,6 @@ export default {
                   {{ link.text }}
                 </li>
               </RouterLink>
-              <a href="https://discord.gg/4t27QFPrH6">
-                <li class="list_item">О проекте</li>
-              </a>
               <li class="list_item">Донат</li>
             </ul>
           </div>
