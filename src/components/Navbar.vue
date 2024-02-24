@@ -40,6 +40,9 @@ export default {
               <RouterLink to="/">
                 <li class="list_item">Главная</li>
               </RouterLink>
+              <RouterLink to="/rules">
+                <li class="list_item">Правила</li>
+              </RouterLink>
               <a href="https://discord.gg/4t27QFPrH6">
                 <li class="list_item">О проекте</li>
               </a>
